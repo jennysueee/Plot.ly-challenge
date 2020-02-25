@@ -4,7 +4,7 @@ function buildMetadata(sample) {
 
   // Use `d3.json` to fetch the metadata for a sample
     // Use d3 to select the panel with id of `#sample-metadata`
-    d3.json(`/metadata/${sample}`).then((data) => {
+    d3.json("/metadata/"+ sample).then(function(data) => {
       var PANEL = d3.select("#sample-metadata");
 
       // Use `.html("") to clear any existing metadata
